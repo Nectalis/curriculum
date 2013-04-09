@@ -1,0 +1,4 @@
+nectalis_curriculum:
+    resource: "@NectalisCurriculumBundle/Controller/DefaultController.php"
+    type:     annotation
+    prefix:   /
