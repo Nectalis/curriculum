@@ -4,3 +4,6 @@
 /app/logs/*
 /vendor/
 /app/config/parameters.yml
+composer.phar
+composer.lock
+/bin/*
