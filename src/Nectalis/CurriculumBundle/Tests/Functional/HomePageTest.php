@@ -10,14 +10,18 @@ class HomePageTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $client->request('GET', '/');
+        $crawler = $client->request('GET', '/');
 
-        // $this->assertTrue($crawler->filter('html:contains("Hello Fabien")')->count() > 0);
 
         $this->assertEquals(
             200,
             $client->getResponse()->getStatusCode()
         );
+
+        $this->assertTrue($crawler->filter('h1')->text() === "Curriculum");
+        $this->assertTrue($crawler->filter('title')->text() === "Curriculum");
+
+        
 
     }
 }
